@@ -21,6 +21,10 @@ create_fileset -constrset -quiet constraints
 
 #Todo: Add your IP here
 
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/centos/CWM-ECAD/Ex7/Ex7.srcs/sources_1/ip/times_table_ex7/times_table_ex7.xci]
+set_property -dict [list CONFIG.Component_Name {times_table_ex7}] [get_ips times_table_ex7]
+
+
 read_verilog "top.v"
 read_verilog "top_tb.v"
 
